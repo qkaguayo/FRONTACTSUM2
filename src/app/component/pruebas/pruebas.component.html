@@ -1,0 +1,62 @@
+<h2>{{Titulo}}</h2>
+<hr>
+<p>Fecha de hoy : {{Fecha2}}</p>
+<br>
+<button class="btn btn-primary" (click)="obtenerDia()">Obtener dia</button>
+<br>
+<hr>
+
+<!--<form (ngsubmit)="insertar2($event)">
+
+
+
+    <button type="submit" class="btn btn-primary">Ingresar</button>
+</form>-->
+
+<form (submit)="insertar()">
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Email address</label>
+        <input [(ngModel)]="email" name="email" type="email" class="form-control" id="email" aria-describedby="emailHelp">
+        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Password</label>
+        <input [(ngModel)]="password" name="password" type="password" class="form-control" id="password">
+    </div>
+    <button type="submit" class="btn btn-primary">Ingresar</button>
+</form>
+
+
+<p>Fecha de hoy : {{Fecha | date:'yyyy-MM-dd'}}</p>
+<p>Fecha de hoy : {{Fecha1}}</p>
+<!--ngIF-->
+<!--llamado al get de la variable-->
+<p>Mes actual : {{getMesNumber}}</p>
+<p>dia actual : {{getDiaNumber}}</p>
+<hr>
+
+<h3>{{Contador}}</h3>}
+
+<input #nuevo type="text" class="form-control" placeholder="Valor a ingresar" id="agregado">
+<button class="btn btn-primary" (click)="agregar(nuevo.value)">agregar dia</button>
+
+<!--Bindings-->
+<button class="btn btn-primary" (click)="sumar()">Sumar</button>
+<h3>{{Contador}}</h3>
+<button class="btn btn-primary" (click)="restar()">Restar</button>
+<br>
+<!--ngFor-->
+<ul>
+    <li *ngFor="let dia of dias_semana; let i = index">
+
+        <b *ngIf="getDiaNumber == i; else templateName"> {{dia}}</b>
+
+        <ng-template #templateName>
+            {{dia}}
+        </ng-template>
+    </li>
+</ul>
+
+
+<h3>El elemento eliminado es: </h3>
+<button class="btn btn-primary" (click)="eliminar()">Eliminar dia</button>

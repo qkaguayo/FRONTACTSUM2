@@ -1,0 +1,43 @@
+{
+    "productos": [{
+            "id": 1,
+            "nombre": "Bu",
+            "descripcion": "Cuarto de libra con queso",
+            "precio": 4000,
+            "imagen": "assets/img/BurgerA.jpg",
+            "cantidad": 10
+        },
+        {
+            "id": 2,
+            "nombre": "BurgerB",
+            "descripcion": "bigmac",
+            "precio": 3500,
+            "imagen": "assets/img/BurgerB.jpg",
+            "cantidad": 10
+        },
+        {
+            "id": 3,
+            "nombre": null,
+            "descripcion": null,
+            "precio": null,
+            "imagen": "assets/img/BurgerC.jpg",
+            "cantidad": 10
+        },
+        {
+            "id": 4,
+            "nombre": null,
+            "descripcion": null,
+            "precio": null,
+            "imagen": "assets/img/BurgerD.jpg",
+            "cantidad": 10
+        },
+        {
+            "id": 5,
+            "nombre": "BurgerE",
+            "descripcion": "Doble cuarto de libra",
+            "precio": "4500",
+            "imagen": "assets/img/BurgerE.jpg",
+            "cantidad": 10
+        }
+    ]
+}
