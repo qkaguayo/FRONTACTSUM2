@@ -17,17 +17,17 @@
         },
         {
             "id": 3,
-            "nombre": null,
-            "descripcion": null,
-            "precio": null,
+            "nombre": "BurgerC",
+            "descripcion": "vegan Burger",
+            "precio": 4000,
             "imagen": "assets/img/BurgerC.jpg",
-            "cantidad": 10
+            "cantidad": 6
         },
         {
             "id": 4,
-            "nombre": null,
-            "descripcion": null,
-            "precio": null,
+            "nombre": "BurgerD",
+            "descripcion": "whooper",
+            "precio": 4500,
             "imagen": "assets/img/BurgerD.jpg",
             "cantidad": 10
         },
