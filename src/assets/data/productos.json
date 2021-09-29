@@ -1,7 +1,7 @@
 {
     "productos": [{
             "id": 1,
-            "nombre": "Bu",
+            "nombre": "BurgerA",
             "descripcion": "Cuarto de libra con queso",
             "precio": 4000,
             "imagen": "assets/img/BurgerA.jpg",
