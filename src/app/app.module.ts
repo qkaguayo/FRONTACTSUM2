@@ -14,6 +14,9 @@ import { FormsModule } from '@angular/forms';
 import { LoginComponent } from './component/login/login.component';
 import { RegistrarseComponent } from './component/registro/registro.component';
 import { HttpClientModule} from '@angular/common/http';
+import { CarritoComponent } from './component/carrito/carrito.component';
+import { EliminarproductoComponent } from './component/eliminarproducto/eliminarproducto.component';
+import { ActualizarproductoComponent } from './component/actualizarproducto/actualizarproducto.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +29,10 @@ import { HttpClientModule} from '@angular/common/http';
     NotFoundComponent,
     PruebasComponent,
     LoginComponent,
-    RegistrarseComponent
+    RegistrarseComponent,
+    CarritoComponent,
+    EliminarproductoComponent,
+    ActualizarproductoComponent
   ],
   imports: [
     BrowserModule,
