@@ -11,6 +11,7 @@ export class ModalComponent implements OnInit {
   @Input() titulo:any = null;
   @Input() detalle:any = null;
   @Input() accion:any = null;
+  @Input() Fecha:any = null;
 
   mensaje: string|undefined;
 
@@ -25,7 +26,7 @@ export class ModalComponent implements OnInit {
     enviarDatos(){
       this.mensaje = 'Enviando datos al padre';
       console.log("enviar datos", this.mensaje)
-      this.accionModal.emit(this.accion);
+      this.accionModal.emit(this.mensaje);
     }
 
 
