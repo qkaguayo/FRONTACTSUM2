@@ -9,7 +9,7 @@ const routes: Routes = [
   {path: 'categoria', component: CategoriaComponent },
   
   {path: '**', component: NotFoundComponent },
-
+  
 ];
 
 @NgModule({

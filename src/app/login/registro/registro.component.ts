@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './registro.component.html',
   styleUrls: ['./registro.component.css']
 })
-export class RegistrarseComponent implements OnInit {
+export class RegistroComponent implements OnInit {
   re = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
   //Anuncio:string|null = null;
   Anuncio: string|null = null;

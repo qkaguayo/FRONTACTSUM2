@@ -1,87 +1,88 @@
 import { formatDate } from '@angular/common';
-import { Component, ComponentFactoryResolver, OnInit } from '@angular/core';
+//import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-pruebas',
   templateUrl: './pruebas.component.html',
   styleUrls: ['./pruebas.component.sass']
 })
-export class PruebasComponent implements OnInit {
-
-  Titulo: string = 'Curso de Angular Basico';
+//export class PruebasComponent implements OnInit {
+export class PruebasComponent {
+  Titulo: string = 'Curso de Angular Básico';
+  Titulo2: string= 'Alerta';
+  Detalle: string = 'Esta a punto de realizar cambios en los productos';
+  Accion: string = 'Guardar Producto';
 
   Fecha: number = new Date().getTime();
+  
   Fecha1: string = formatDate(new Date(), 'dd/MM/yyyy', 'en');
-  Fecha2: string = Date.now().toString();
+  Fecha2: string = new Date().toString();
   Mes: number = new Date().getMonth() + 1;
-  //puede ser de los 3 tipos de datos (number|null|string)
-  Dia: number|null= null;
-  Contador: number =0;
-  //
-  dias_semana:string[]=['Domingo', 'Lunes', 'Martes', 'Miercoles', 'Jueves', 'Viernes', 'Sabado'];
-  eliminado: null|string|undefined = null;
-  //for(let dia of dias_semana) {}
+  // puede ser de uno de los 3 tipos de datos (number|null|string)
+  Dia: number|null = null;
+  eliminado:null|string|undefined = null;
+  Contador: number = 0;
+  //mensaje: string = "";
 
-//variables formulario
-email: string| null = null; 
-password: string|null = "";
+  email: string|null = "";
+  password: string|null = "";
 
-Agregado: string|null = null;
-
-
-
+  dias_semana:string[] = ['Domingo','Lunes', 'Martes', 'Miercoles', 'Jueves', 'Viernes', 'Sabado'];
+//for (let dia of dias_semana)
+/*
   constructor() { 
-    console.log("Constructor pruebas");
+    console.log("Constructor Pruebas");
   }
-
   ngOnInit(): void {
-    console.log('ngOnInit Pruebas');
-  }
+    console.log("ngOnInit Pruebas");
+  }*/
 
-  //set y gets
-  get getMesNumber() : number {
+// set y get
+  get getMesNumber(): number {
     return this.Mes;
   }
 
-  get getDiaNumber() : number|null {
+  get getDiaNumber():number|null {
     return this.Dia;
   }
 
-  get getContadorNumber() : number {
+  get getContadorNumber(): number {
     return this.Contador;
   }
-  
-  //metodos o funciones (logica de negocio)
 
-    obtenerDia(): void {
-      this.Dia = new Date().getDay();
-    }
+//metodos o funciones (logica de negocio)
 
-    sumar(): void {
-      this.Contador++;
-    }
+  obtenerDia(): void {
+    this.Dia = new Date().getDay();
+  }
 
-    restar(): void {
-      this.Contador--;
-    }
+  sumar(): void {
+    this.Contador++;
+  }
 
-    eliminar(): void {
-      this.eliminado = this.dias_semana.pop();
-    }
+  restar(): void {
+    this.Contador--;
+  }
 
-    agregar(nuevo: string): void{
-      
-    }
-    
-    insertar(): void {
-      console.log("metodo insertar...")
-      console.log(this.email, this.password);
+  eliminar(): void {
+    this.eliminado= this.dias_semana.pop();
+  }
 
-    }
+  agregar(): void {
+  }
 
-    insertar2(event: any): void {
-      console.log(" metodo insertar 2...");
-      event.preventDefault();
-      console.log(event);
-      }
+  insertar(): void {
+    console.log(" metodo insertar...");
+  }
+
+  insertar2(event: any): void {
+    console.log(" metodo insertar 2...");
+    event.preventDefault();
+    console.log(event);
+  }
+
+  capturarVariable(mensaje: any): void {
+    console.log("capturarVariable...", mensaje);
+  }
 }
