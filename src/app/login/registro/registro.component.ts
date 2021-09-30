@@ -7,15 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./registro.component.css']
 })
 export class RegistroComponent implements OnInit {
-  re = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+  
   //Anuncio:string|null = null;
   Anuncio: string|null = null;
 
-  nombre  : string|null = null;
-  apellido: string|null = null;
-  email   : string|null = null;
-  password: string|null = null;
-
+  pais  : string|null = null;
+  calle: string|null = null;
+  ciudad  : string|null = null;
+  region: string|null = null;
+  codigo: string|null = null;
 
   constructor() { }
 
@@ -24,35 +24,30 @@ export class RegistroComponent implements OnInit {
 
 
   insertar():void{
-    let nombre1 = String(this.nombre);
-    let apellido1 = String(this.apellido);
-    let email1 = String(this.email);
-    let password1 = String(this.password);
+    let pais1 = String(this.pais);
+    let calle1 = String(this.calle);
+    let ciudad1 = String(this.ciudad);
+    let region1 = String(this.region);
+    let codigo1 = String(this.codigo);
 
-    if(nombre1.length == 0 || apellido1.length == 0 || email1.length == 0 || password1.length == 0){
+    if(pais1.length == 0 || calle1.length == 0 || ciudad1.length == 0 || region1.length == 0 || codigo1.length == 0){
       console.log("Espacio en blanco encontrado");
       this.Anuncio = "Campo Vacios";
     }
 
-    if(nombre1.search(" ") >= 0 || apellido1.search(" ") >= 0 || email1.search(" ") >= 0 || password1.search(" ") >= 0 ){
+    if(pais1.search(" ") >= 0 || calle1.search(" ") >= 0 || ciudad1.search(" ") >= 0 || region1.search(" ") >= 0 ){
       console.log("Espacio en blanco encontrado");
       this.Anuncio = "Carácteres vacios encontrados";
     }
 
-    if(this.re.test(email1)){
-      console.log("email correcto");
-      }else{
-        console.log("email incorrecto");
-      }
-    
-    if(nombre1.length < 3 || apellido1.length <4) {
+    if(pais1.length < 3 || calle1.length <4) {
       console.log("campo muy corto encontrado");
-      this.Anuncio = "Apellido/nombre muy corto";
+      this.Anuncio = "pais/calle muy corto";
     }
   
 
     console.log("metodo insertar1");
-    console.log(this.nombre +" "+this.apellido+" "+this.email +" "+ this.password);
+    console.log(this.pais +" "+this.calle+" "+this.ciudad +" "+ this.region);
 
   }
   

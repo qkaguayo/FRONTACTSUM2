@@ -4,12 +4,14 @@ import { LoginComponent } from './login/login.component';
 import { RegistroComponent } from './registro/registro.component';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
+import { RegistrotarjetaComponent } from './registrotarjeta/registrotarjeta.component';
 
 
 @NgModule({
   declarations: [
     LoginComponent,
-    RegistroComponent
+    RegistroComponent,
+    RegistrotarjetaComponent
   ],
   exports: [
     LoginComponent,

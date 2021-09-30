@@ -1,25 +1,37 @@
 <form (ngSubmit)="insertar()">
     <h2>Registro</h2>
+    <!--  país, calle, ciudad, región y código postal.-->
     <div class="mb-3">
-        <label for="nombre" class="form-label">Nombre</label>
-        <input [(ngModel)]="nombre" name="nombre" type="nombre" class="form-control" id="nombre" aria-describedby="nombreHelp">
+        <label for="nombre" class="form-label">Pais</label>
+        <input [(ngModel)]="pais" name="pais" type="pais" class="form-control" id="pais" aria-describedby="paisHelp">
         <div id="nombreHelp" class="form-text">Nunca compartiremos su nombre con nadie más.</div>
     </div>
+
     <div class="mb-3">
-        <label for="apellido" class="form-label">Apellido</label>
-        <input [(ngModel)]="apellido" name="apellido" type="apellido" class="form-control" id="apellido" aria-describedby="apellidoHelp">
-        <div id="apellidoHelp" class="form-text">Nunca compartiremos su apellido con nadie más.</div>
+        <label for="calle" class="form-label">Calle</label>
+        <input [(ngModel)]="calle" name="calle" type="calle" class="form-control" id="calle" aria-describedby="calleHelp">
+        <div id="calleHelp" class="form-text">Nunca compartiremos su calle con nadie más.</div>
     </div>
+
     <div class="mb-3">
-        <label for="email" class="form-label">Correo Electronico</label>
-        <input [(ngModel)]="email" name="email" type="email" class="form-control" id="email" aria-describedby="emailHelp">
-        <div id="emailHelp" class="form-text">Nunca compartiremos su correo electrónico con nadie más.</div>
+        <label for="ciudad" class="form-label">Ciudad</label>
+        <input [(ngModel)]="ciudad" name="ciudad" type="ciudad" class="form-control" id="ciudad" aria-describedby="ciudadHelp">
+        <div id="ciudadHelp" class="form-text">Nunca compartiremos su ciudad con nadie más.</div>
     </div>
+
     <div class="mb-3">
-        <label for="password" class="form-label">Contraseña</label>
-        <input [(ngModel)]="password" name="password" type="password" class="form-control" id="password">
+        <label for="region" class="form-label">Region</label>
+        <input [(ngModel)]="region" name="region" type="region" class="form-control" id="region" aria-describedby="regionHelp">
+        <div id="regionHelp" class="form-text">Nunca compartiremos su region con nadie más.</div>
     </div>
+
+    <div class="mb-3">
+        <label for="codigo" class="form-label">Codigo postal</label>
+        <input [(ngModel)]="codigo" name="codigo" type="codigo" class="form-control" id="codigo" aria-describedby="codigoHelp">
+        <div id="codigoHelp" class="form-text">Nunca compartiremos su codigo postal con nadie más.</div>
+    </div>
+
     <button type="submit" class="btn btn-success">Ingresar</button>
 </form>
-{{nombre}}{{apellido}}{{email}} {{password}}
+{{pais}}{{calle}}{{ciudad}}{{region}}
 <br>

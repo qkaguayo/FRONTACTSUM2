@@ -1,0 +1,44 @@
+<form (ngSubmit)="insertar()">
+    <h2>Registro tarjeta</h2>
+    <!--  tipo de tarjeta, nombre del cliente en la tarjeta, número de tarjeta, código de seguridad, mes de expiración y año de expiración.  -->
+    <div class="mb-3">
+
+        <label for="tipotarjeta" class="form-label">Tipo de tarjeta</label>
+        <input [(ngModel)]="tipotarjeta" name="tipotarjeta" type="tipotarjeta" class="form-control" id="tipotarjeta" aria-describedby="tipotarjetaHelp">
+        <div id="tipotarjetaHelp" class="form-text"></div>
+    </div>
+
+    <div class="mb-3">
+        <label for="nombretarjeta" class="form-label">Nombre tarjeta</label>
+        <input [(ngModel)]="nombretarjeta" name="nombretarjeta" type="nombretarjeta" class="form-control" id="nombretarjeta" aria-describedby="nombretarjetaHelp">
+        <div id="nombretarjetaHelp" class="form-text">Nunca compartiremos su nombre con nadie más.</div>
+    </div>
+
+    <div class="mb-3">
+        <label for="numerotarjeta" class="form-label">Numero tarjeta</label>
+        <input [(ngModel)]="numerotarjeta" name="numerotarjeta" type="numerotarjeta" class="form-control" id="numerotarjeta" aria-describedby="numerotarjetaHelp">
+        <div id="numerotarjetaHelp" class="form-text">Nunca compartiremos su numero de tarjeta con nadie más.</div>
+    </div>
+
+    <div class="mb-3">
+        <label for="codigoseguridad" class="form-label">Codigo de seguridad</label>
+        <input [(ngModel)]="codigoseguridad" name="codigoseguridad" type="codigoseguridad" class="form-control" id="codigoseguridad" aria-describedby="codigoseguridadHelp">
+        <div id="codigoseguridadHelp" class="form-text">Nunca compartiremos su codigo de seguridad con nadie más.</div>
+    </div>
+
+    <div class="mb-3">
+        <label for="mesexpiracion" class="form-label">Mes expiración</label>
+        <input [(ngModel)]="mesexpiracion" name="mesexpiracion" type="mesexpiracion" class="form-control" id="mesexpiracion" aria-describedby="mesexpiracionHelp">
+        <div id="mesexpiracionHelp" class="form-text"></div>
+    </div>
+
+    <div class="mb-3">
+        <label for="anioexpiracion" class="form-label">Codigo postal</label>
+        <input [(ngModel)]="anioexpiracion" name="anioexpiracion" type="anioexpiracion" class="form-control" id="anioexpiracion" aria-describedby="anioexpiracionHelp">
+        <div id="anioexpiracionHelp" class="form-text"></div>
+    </div>
+
+    <button type="submit" class="btn btn-success">Ingresar</button>
+</form>
+{{tipotarjeta}}{{nombretarjeta}}{{numerotarjeta}}{{codigoseguridad}}{{mesexpiracion}}{{anioexpiracion}}
+<br>
